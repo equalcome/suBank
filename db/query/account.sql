@@ -4,7 +4,7 @@ INSERT INTO accounts (
   balance,
   currency
 ) VALUES (
-  $1, $2 ,$3
+  $1, $2, $3
 )
 RETURNING *;
   
@@ -19,9 +19,10 @@ FOR NO KEY UPDATE;
 
 -- name: ListAccounts :many
 SELECT * FROM accounts
+WHERE owner = $1
 ORDER BY id
-LIMIT $1
-OFFSET $2;
+LIMIT $2
+OFFSET $3;
 
 -- LIMIT $1：這表示最多返回 $1 行記錄，這裡的 $1 是一個佔位符，實際值在查詢執行時由使用者傳入。這讓查詢能夠靈活控制要返回的記錄數。
 
