@@ -1,6 +1,6 @@
 # 啟動 PostgreSQL 的 Docker 容器，名稱為 postgres12
 postgres:
-	docker run --name postgres12 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:12-alpine
+	docker run --name postgres12 --network bank-network -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres:12-alpine
 
 # 創建 simple_bank 資料庫
 createdb:
