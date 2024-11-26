@@ -12,7 +12,7 @@ dropdb:
 
 # 執行資料庫的升級遷移，使資料庫達到最新狀態
 migrateup:
-	migrate -path ./db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" --verbose up
+	migrate -path ./db/migration -database "postgresql://root:ewNWJ2nBQxCqyFeoCFDW@simple-bamk.chwmuq88opg2.ap-northeast-1.rds.amazonaws.com:5432/simple_bank" --verbose up
 migrateup1:
 	migrate -path ./db/migration -database "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable" --verbose up 1
 
