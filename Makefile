@@ -41,3 +41,5 @@ mock:
 
 
 .PHONY: postgres createdb dropdb migrateup migratedown migrateup1 migratedown1 sqlc test server mock 
+
+# a
